@@ -1,0 +1,1937 @@
+/* DM Sans: locally hosted Latin variable font, weights 400-700. */
+@font-face {
+  font-family: "DM Sans";
+  src: url("assets/fonts/dm-sans-latin-variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: block;
+}
+
+/* Roboto Regular is reserved for the newsletter email field. */
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/roboto-latin-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+}
+
+
+:root {
+  /* Estimations depuis la capture : à vérifier dans Figma. */
+  --color-blue: #222b68;
+  --color-gray: #ebebeb;
+  --color-orange: #ff6b20;
+  --color-text: #ffffff;
+  --color-muted: #d7daec;
+  --container-width: 1232px;
+  --page-gutter: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Le dégradé couvre la Navbar et le Hero sans coupure. */
+.first-screen {
+  font-family: "DM Sans", Arial, sans-serif;
+  min-height: 900px;
+  color: var(--color-text);
+  background: linear-gradient(
+    to right,
+    var(--color-blue) 0%,
+    var(--color-blue) 57.8%,
+    var(--color-gray) 57.8%,
+    var(--color-gray) 100%
+  );
+}
+
+/* À 1440 px : (1440 - 1232) / 2 = 104 px de marge. */
+.container {
+  width: min(
+    calc(100% - 2 * var(--page-gutter)),
+    var(--container-width)
+  );
+  margin-inline: auto;
+}
+
+.navbar {
+  min-height: 124px;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+.brand {
+  flex-shrink: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.brand img {
+  display: block;
+  width: 140px;
+  height: auto;
+}
+
+.main-nav {
+  display: flex;
+  align-items: baseline;
+  gap: 32px;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+/* Keep each menu label on one line; differing line heights share a baseline. */
+.main-nav a {
+  white-space: nowrap;
+}
+.main-nav a[aria-current="page"] {
+  font-weight: 700;
+  line-height: 32px;
+  color: var(--color-orange);
+}
+
+.contact-button {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+/* Typography supplied from the Home frame in Figma. */
+.hero,
+.business-power,
+.featured {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.hero {
+  padding-block: 88px 120px;
+}
+
+.hero-content {
+  max-width: 640px;
+}
+
+.eyebrow {
+  margin: 0 0 24px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+h1 {
+  max-width: 600px;
+  margin: 0;
+  font-size: 64px;
+  line-height: 1.375;
+  font-weight: 700;
+}
+
+.hero-description {
+  margin: 24px 0 40px;
+  color: var(--color-muted);
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+}
+
+.hero .button {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 14px 40px;
+  border-radius: 6px;
+  background: var(--color-orange);
+  color: var(--color-text);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.contact-button {
+  min-height: 48px;
+  padding-inline: 32px;
+}
+
+a:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 5px;
+}
+
+/* Adaptation provisoire : à vérifier avec le rendu tablette. */
+@media (max-width: 1100px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-block: 24px;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+  }
+
+  .hero-content {
+    max-width: 50%;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+}
+
+/* Proposition mobile : le contenu occupe toute la zone bleue. */
+@media (max-width: 700px) {
+  .first-screen {
+    min-height: 100svh;
+    background: var(--color-blue);
+  }
+
+  .hero {
+    padding-block: 56px 80px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .contact-button {
+    padding-inline: 20px;
+  }
+}
+
+/* Partner: 980 - 900 = 80 px below Hero; (1440 - 1130) / 2 = 155 px. */
+.partners {
+  padding-block: 80px;
+  background: #ffffff;
+}
+
+.partner-logos {
+  width: min(calc(100% - 2 * var(--page-gutter)), 1130px);
+  margin-inline: auto;
+  overflow-x: auto;
+}
+
+.partner-logos img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.partner-logos:focus-visible {
+  outline: 3px solid var(--color-blue);
+  outline-offset: 5px;
+}
+
+@media (max-width: 700px) {
+  .partners {
+    padding-block: 48px;
+  }
+
+  /* One combined image: allow scrolling to keep the logos readable. */
+  .partner-logos img {
+    min-width: 700px;
+  }
+}
+
+/* Business Power: Partner ends at Y 1160 on desktop; add 40 px to reach Y 1200.
+   Text colors and internal card padding are estimated from the screenshot. */
+.business-power {
+  padding-block: 40px 160px;
+  background: #ffffff;
+  color: #333333;
+}
+
+.business-power h2 {
+  margin: 0 0 80px;
+  font-size: 48px;
+  line-height: 1.333;
+  font-weight: 700;
+}
+
+/* At 1232 px: three 400 px cards separated by two 16 px gaps. */
+.business-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.business-card {
+  min-height: 400px;
+  padding: 64px 24px 40px;
+}
+
+.business-card-icon {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 40px;
+  object-fit: contain;
+}
+
+.business-card h3 {
+  margin: 0 0 24px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.business-card p {
+  margin: 0;
+  color: #888888;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+}
+
+@media (max-width: 1000px) {
+  .business-power {
+    padding-block: 40px 96px;
+  }
+
+  .business-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .business-power {
+    padding-block: 24px 64px;
+  }
+
+  .business-power h2 {
+    margin-bottom: 40px;
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .business-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .business-card {
+    min-height: 0;
+    padding: 32px 24px;
+  }
+
+  .business-card-icon {
+    margin-bottom: 32px;
+  }
+}
+
+/* Featured: desktop typography supplied from Figma; section spacing is estimated. */
+.featured {
+  padding-block: 160px;
+  background: #f8f9fc;
+  color: #333333;
+}
+
+.featured-content {
+  max-width: 1080px;
+}
+
+.featured h2 {
+  margin: 0 0 128px;
+  font-size: 64px;
+  line-height: 1.375;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.featured-list {
+  display: grid;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.featured-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Decorative PNG behind real HTML text; the ordered list carries the order. */
+.featured-number {
+  display: grid;
+  place-items: center;
+  flex: 0 0 56px;
+  width: 56px;
+  height: 32px;
+  background: url("assets/images/featured-number.png") center / contain no-repeat;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.featured-item p {
+  min-width: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+}
+
+@media (max-width: 1000px) {
+  .featured {
+    padding-block: 96px;
+  }
+
+  .featured h2 {
+    margin-bottom: 80px;
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .featured {
+    padding-block: 64px;
+  }
+
+  .featured h2 {
+    margin-bottom: 40px;
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .featured-item {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .featured-item p {
+    overflow-wrap: break-word;
+  }
+}
+
+/* SEO Traffic: desktop typography supplied from Figma; layout and offsets estimated.
+   Desktop columns: 608 + 120 gap + 504 = the shared 1232 px container. */
+.seo-traffic {
+  padding-block: 160px;
+  background: #ffffff;
+  color: #333333;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.traffic-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 608fr) minmax(0, 504fr);
+  gap: 120px;
+  align-items: start;
+}
+
+/* Reserve the overlap space so the card cannot cover the next section. */
+.traffic-visual {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 608 / 776;
+  margin: 0;
+}
+
+.traffic-placeholder {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Percentage offsets let the complete dashboard scale with its image column. */
+.traffic-card {
+  position: absolute;
+  top: 43.29897%;
+  left: 43.42105%;
+  width: 59.21053%;
+  aspect-ratio: 360 / 440;
+  container-type: inline-size;
+  overflow: hidden;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.traffic-card-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.traffic-avatar {
+  position: absolute;
+  top: 5.45455%;
+  left: 38.88889%;
+  width: 22.22222%;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* cqw units keep the text proportional to the card's own width. */
+.traffic-profile-name,
+.traffic-profile-role {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 4.4444444444cqw;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.traffic-profile-name {
+  top: 27.27273%;
+  font-size: 6.6666666667cqw;
+  font-weight: 700;
+  line-height: 1.3333333333;
+  text-align: left;
+  left: 50%;
+  width: max-content;
+  max-width: calc(100% - 8.88889cqw);
+  transform: translateX(-50%);
+}
+
+.traffic-profile-role {
+  top: 36.36364%;
+  font-size: 4.44444cqw;
+  line-height: 1.5;
+}
+
+.traffic-experience {
+  position: absolute;
+  top: 45.45455%;
+  left: 11.11111%;
+  width: 77.77778%;
+  height: 11.1111111111cqw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.2222222222cqw;
+  padding: 0 3.3333333333cqw;
+  border-radius: 1.1111111111cqw;
+  background: #f1f1f6;
+  color: #5541d7;
+  font-size: 4.4444444444cqw;
+  font-weight: 400;
+  line-height: 1.6875;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.traffic-experience-dot {
+  flex: 0 0 2.2222222222cqw;
+  width: 2.2222222222cqw;
+  height: 2.2222222222cqw;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.traffic-tooltip {
+  position: absolute;
+  z-index: 2;
+  top: 60.90909%;
+  left: 48%;
+  display: grid;
+  width: 28.88889%;
+  padding: 1.11111cqw;
+  transform: translateX(-50%);
+  border-radius: 4px;
+  background: #ffffff;
+  color: #333333;
+  text-align: center;
+}
+
+.traffic-tooltip::after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 2.22222cqw;
+  height: 2.22222cqw;
+  content: "";
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #ffffff;
+}
+
+.traffic-tooltip strong {
+  font-size: 3.3333333333cqw;
+  line-height: 2;
+  font-weight: 700;
+}
+
+.traffic-tooltip span {
+  color: #888888;
+  font-size: 2.5cqw;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0.008em;
+  text-align: center;
+}
+
+.traffic-chart {
+  position: absolute;
+  inset: auto 0 0;
+  height: 28.40909%;
+}
+
+.traffic-chart-fill {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.traffic-chart-outline {
+  position: absolute;
+  inset: 0 0 auto;
+  width: 100%;
+  height: 69.6%;
+}
+
+.traffic-chart-beam {
+  position: absolute;
+  top: 4%;
+  bottom: 0;
+  left: 45.77778%;
+  width: 4.44444%;
+  background: linear-gradient(to bottom, #a594f4, transparent);
+}
+
+.traffic-chart-point {
+  position: absolute;
+  top: 0;
+  left: 48%;
+  width: 2.77778cqw;
+  height: 2.77778cqw;
+  transform: translateX(-50%);
+  border: 0.55556cqw solid #ffffff;
+  border-radius: 50%;
+  background: #a594f4;
+}
+
+.traffic-copy {
+  min-width: 0;
+  padding-top: 160px;
+}
+
+.traffic-copy h2 {
+  margin: 0 0 40px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.333;
+}
+
+.traffic-description {
+  margin: 0 0 48px;
+  color: #888888;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+}
+
+.traffic-milestone {
+  display: grid;
+  width: 236px;
+  max-width: 100%;
+  height: auto;
+  grid-template-columns: 104px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+/* Real text replaces the original milestone PNG so typography remains editable. */
+.traffic-milestone-value {
+  margin: 0;
+  color: #35cb8d;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.333;
+  text-align: center;
+}
+
+.traffic-milestone-labels p {
+  margin: 0;
+  color: #2e2e2e;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 1000px) {
+  .seo-traffic {
+    padding-block: 96px;
+  }
+
+  .traffic-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 64px;
+  }
+
+  .traffic-visual {
+    max-width: 608px;
+    margin-inline: auto;
+  }
+
+  .traffic-copy {
+    width: 100%;
+    max-width: 608px;
+    margin-inline: auto;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .seo-traffic {
+    padding-block: 64px;
+  }
+
+  .traffic-layout {
+    gap: 48px;
+  }
+
+  .traffic-visual {
+    aspect-ratio: 608 / 900;
+  }
+
+  /* Enlarge the card relative to the placeholder on small screens. */
+  .traffic-card {
+    inset: auto 0 0 auto;
+    width: min(360px, 84%);
+  }
+
+  .traffic-copy h2 {
+    margin-bottom: 24px;
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .traffic-description {
+    margin-bottom: 32px;
+  }
+}
+
+
+/* SEO Guide: background and 120 px icons supplied as PNGs.
+   Desktop spacing and card highlight estimated from the reference screenshot. */
+.seo-guide {
+  padding-block: 80px 79px;
+  background: #1f2a6b url("assets/images/seo-guide-background.png") center / cover no-repeat;
+  color: #f1f6ff;
+  text-align: center;
+}
+
+.seo-guide h2 {
+  margin: 0 0 24px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.333;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.guide-description {
+  max-width: 608px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+/* Four 296 px cards with 16 px gaps in the shared 1232 px container. */
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin: 64px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guide-card {
+  min-height: 384px;
+  padding: 48px 24px;
+}
+
+.guide-icon {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 40px;
+  object-fit: contain;
+}
+
+.guide-card h3 {
+  margin: 0 0 16px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.guide-card:first-child h3 {
+  text-align: left;
+}
+
+.guide-card p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .guide-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .seo-guide {
+    padding-block: 64px;
+  }
+
+  .seo-guide h2 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .guide-description br {
+    display: none;
+  }
+
+  .guide-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    max-width: 400px;
+    margin: 40px auto 0;
+  }
+
+  .guide-card {
+    min-height: 0;
+    padding: 32px 24px;
+  }
+
+  .guide-icon {
+    margin-bottom: 32px;
+  }
+}
+
+
+/* Our Works: desktop grid 400 + 16 + 400 + 16 + 400 = 1232 px.
+   Typography and section padding estimated from the supplied screenshot. */
+.our-works {
+  padding-block: 160px 80px;
+  background: #ffffff;
+  color: #333333;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.works-intro {
+  min-width: 0;
+  padding-top: 80px;
+}
+
+.works-intro h2 {
+  margin: 0 0 24px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.333;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.works-intro p {
+  max-width: 320px;
+  margin: 0 0 32px;
+  color: #888888;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.works-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 172px;
+  max-width: 100%;
+  min-height: 56px;
+  padding: 16px 24px;
+  border-radius: 6px;
+  background: #fa6d24;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+
+
+/* Portfolio caption rebuilt as real text from the original featured PNG. */
+.works-featured {
+  width: 100%;
+  grid-column: span 2;
+  min-width: 0;
+  margin: 0;
+  display: flex;
+  align-items: flex-end;
+  aspect-ratio: 816 / 400;
+  padding: 32px;
+  background: #485185;
+  color: #ffffff;
+  text-align: left;
+}
+
+.works-thumbnail img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.works-featured figcaption {
+  min-width: 0;
+  width: 100%;
+}
+
+.works-featured h3 {
+  margin: 0 0 16px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.works-see-more {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.works-see-more span {
+  font-size: 24px;
+}
+
+.works-thumbnail {
+  min-width: 0;
+}
+
+@media (max-width: 1100px) {
+  .our-works {
+    padding-block: 96px 64px;
+  }
+
+  .works-intro {
+    grid-column: 1 / -1;
+    padding-top: 0;
+    margin-bottom: 24px;
+  }
+
+  .works-intro p {
+    max-width: 608px;
+  }
+
+  .works-featured {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .our-works {
+    padding-block: 64px;
+  }
+
+  .works-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .works-intro h2 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .works-intro p {
+    margin-bottom: 24px;
+  }
+
+  .works-featured {
+    min-height: 200px;
+    padding: 24px;
+  }
+}
+
+
+/* Pricing: supplied Standard card is 400 x 537 px.
+   Desktop gaps, typography and padding estimated from the reference. */
+.pricing {
+  padding-block: 24px 160px;
+  background: #ffffff;
+  color: #333333;
+  text-align: center;
+}
+
+.pricing h2 {
+  margin: 0 0 16px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.333;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.pricing-description {
+  max-width: 640px;
+  margin: 0 auto;
+  color: #888888;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+/* Static artwork: Annual is the state shown in the design. */
+.pricing-period {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin: 24px 0 48px;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.pricing-period img {
+  display: block;
+  flex-shrink: 0;
+  width: 80px;
+  height: 56px;
+}
+
+.pricing-period-monthly {
+  color: #888888;
+  text-align: right;
+}
+
+.pricing-period-annual {
+  color: #1f2a6b;
+  text-align: left;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  min-height: 537px;
+  padding: 40px 32px;
+  background: #f9fafe;
+  color: #888888;
+}
+
+.pricing-card--featured {
+  background: #1f2a6b url("assets/images/pricing-card.png") center / cover no-repeat;
+  color: #ffffff;
+}
+
+.pricing-logo {
+  display: block;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.pricing-card h3 {
+  margin: 24px 0 16px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.pricing-price {
+  margin: 0 0 24px;
+  color: #1f2a6b;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.333;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.pricing-card--featured .pricing-price {
+  color: #ffffff;
+}
+
+.pricing-card-description {
+  margin: 0 0 32px;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.pricing-purchase {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 154px;
+  max-width: 100%;
+  height: 56px;
+  margin-top: auto;
+  padding: 15px 20px;
+  border: 1px solid #fa6d24;
+  border-radius: 6px;
+  background: transparent;
+  color: #fa6d24;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.pricing-card--featured .pricing-purchase {
+  background: #fa6d24;
+  color: #ffffff;
+}
+
+@media (max-width: 1100px) {
+  .pricing {
+    padding-block: 24px 96px;
+  }
+
+  .pricing-card {
+    padding-inline: 24px;
+  }
+}
+
+@media (max-width: 800px) {
+  .pricing-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    max-width: 400px;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .pricing {
+    padding-block: 24px 64px;
+  }
+
+  .pricing h2 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .pricing-description br {
+    display: none;
+  }
+
+  .pricing-period {
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+}
+
+
+/* Testimonials: supplied background 920 x 476, portrait 400 x 480.
+   Internal spacing and typography estimated from the reference screenshot. */
+.testimonials {
+  padding-block: 56px 160px;
+  background: #ffffff;
+  color: #333333;
+}
+
+/* At 1440 px: the shared container starts at 104; add 104 to reach X 208. */
+.testimonial-panel {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: 400px minmax(0, 1fr);
+  gap: 120px;
+  min-height: 520px;
+  margin-left: 104px;
+}
+
+.testimonial-panel::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 44px 208px;
+  content: "";
+  background: #f9fafe url("assets/images/testimonial-background.png") center / cover no-repeat;
+}
+
+.testimonial-portrait {
+  display: block;
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 40px;
+}
+
+.testimonial-content {
+  min-width: 0;
+  margin: 0;
+  padding: 64px 64px 64px 0;
+}
+
+.testimonial-quote-icon {
+  display: block;
+  width: 80px;
+  height: 80px;
+}
+
+.testimonial-quote {
+  margin: 32px 0 40px;
+}
+
+.testimonial-quote p {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.testimonial-footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.testimonial-attribution {
+  min-width: 0;
+}
+
+.testimonial-author {
+  display: block;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.testimonial-role {
+  margin: 8px 0 0;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.testimonial-arrows {
+  display: block;
+  flex-shrink: 0;
+  width: 97px;
+  height: 42px;
+}
+
+@media (max-width: 1100px) {
+  .testimonials {
+    padding-block: 32px 96px;
+  }
+
+  .testimonial-panel {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+    gap: 48px;
+    min-height: 0;
+    margin-left: 0;
+  }
+
+  .testimonial-panel::before {
+    inset: 0 0 0 16%;
+  }
+
+  .testimonial-content {
+    padding: 32px 32px 48px 0;
+  }
+
+  .testimonial-quote p {
+    font-size: 28px;
+  }
+
+  .testimonial-quote br {
+    display: none;
+  }
+
+  .testimonial-footer {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 800px) {
+  .testimonial-panel {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    max-width: 608px;
+    margin-inline: auto;
+    padding: 32px;
+  }
+
+  .testimonial-panel::before {
+    inset: 0;
+  }
+
+  .testimonial-portrait {
+    margin: 0 auto;
+  }
+
+  .testimonial-content {
+    padding: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonials {
+    padding-block: 0 64px;
+  }
+
+  .testimonial-panel {
+    padding: 24px;
+  }
+
+  .testimonial-quote-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .testimonial-quote {
+    margin: 24px 0 32px;
+  }
+
+  .testimonial-quote p {
+    font-size: 24px;
+  }
+}
+
+
+/* Latest News: three 400 px columns with 16 px gaps at desktop width.
+   Image height, text sizes and spacing estimated from the screenshot. */
+.latest-news {
+  padding-block: 0 160px;
+  background: #ffffff;
+  color: #333333;
+}
+
+.latest-news h2 {
+  margin: 0 0 40px;
+  color: #20233f;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.333;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.news-card {
+  min-width: 0;
+}
+
+.news-visual {
+  aspect-ratio: 400 / 416;
+  background: #ebebeb;
+}
+
+.news-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-card h3 {
+  margin: 24px 0 16px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  overflow-wrap: break-word;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.news-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 16px;
+  color: #888888;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.news-meta-dot {
+  flex-shrink: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.news-excerpt {
+  margin: 0 0 24px;
+  color: #999999;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.news-explore {
+  display: inline-block;
+  color: #fa6d24;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+@media (max-width: 1100px) {
+  .latest-news {
+    padding-bottom: 96px;
+  }
+
+  .news-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .latest-news {
+    padding-bottom: 64px;
+  }
+
+  .latest-news h2 {
+    margin-bottom: 32px;
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .news-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+}
+
+
+/* Newsletter CTA: Figma typography; 435 px natural desktop height with 27 px subtitle. */
+.newsletter {
+  padding-bottom: 80px;
+  background: #ffffff;
+}
+
+.newsletter-panel {
+  padding: 64px 24px;
+  background: #1f2a6b url("assets/images/newsletter-background.png") center / cover no-repeat;
+  color: #ffffff;
+  text-align: center;
+}
+
+.newsletter h2 {
+  margin: 0 0 32px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.333;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.newsletter-description {
+  margin: 0 0 64px;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+/* Native editable input: the reference PNG already contains placeholder text. */
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 576px;
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+.newsletter-form input {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 56px;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #333333;
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: left;
+  font-family: "Roboto", Arial, sans-serif;
+  font-style: normal;
+}
+
+.newsletter-form input::placeholder {
+  color: #cccccc;
+  opacity: 1;
+}
+
+.newsletter-send {
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: #ff6b20;
+  cursor: pointer;
+}
+
+.newsletter-send img {
+  display: block;
+  width: 56px;
+  height: 56px;
+}
+
+.newsletter-form :focus-visible {
+  outline: 3px solid #f1f6ff;
+  outline-offset: 4px;
+}
+
+.newsletter-status {
+  margin: 24px 0 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (max-width: 1100px) {
+  .newsletter {
+    padding-bottom: 64px;
+  }
+}
+
+@media (max-width: 640px) {
+  .newsletter-panel {
+    padding: 48px 24px;
+  }
+
+  .newsletter h2 {
+    margin-bottom: 24px;
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .newsletter-description {
+    margin-bottom: 32px;
+  }
+
+  .newsletter-form {
+    gap: 12px;
+  }
+}
+
+
+/* Footer: 423 px desktop background; spacing estimated from the reference. */
+.site-footer {
+  min-height: 423px;
+  padding-block: 64px 40px;
+  background: #1f2a6b url("assets/images/footer-background.png") center / cover no-repeat;
+  color: #f1f6ff;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr) 152px;
+  gap: 72px;
+  align-items: start;
+}
+
+.footer-info {
+  min-width: 0;
+}
+
+.footer-brand {
+  display: block;
+  width: 135px;
+  max-width: 100%;
+}
+
+.footer-brand img {
+  display: block;
+  width: 135px;
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-description {
+  margin: 24px 0 0;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.footer-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  min-width: 0;
+  padding-top: 80px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.footer-menu a {
+  white-space: nowrap;
+}
+
+
+
+.footer-social {
+  display: flex;
+  width: 152px;
+  max-width: 100%;
+  height: 40px;
+  margin-top: 80px;
+  gap: 16px;
+}
+
+.footer-social-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fa6d24;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.005em;
+  text-align: center;
+}
+
+.footer-divider {
+  height: 0;
+  margin: 80px 0 24px;
+  border: 0;
+  border-top: 1px solid #b8bdd5;
+}
+
+.footer-copyright {
+  margin: 0;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+@media (max-width: 1100px) {
+  .footer-top {
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 32px 48px;
+  }
+
+  .footer-info {
+    grid-row: span 2;
+  }
+
+  .footer-menu {
+    gap: 16px 24px;
+    padding-top: 16px;
+  }
+
+  .footer-social {
+    grid-column: 2;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-footer {
+    min-height: 0;
+    padding-block: 48px 32px;
+  }
+
+  .footer-top {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .footer-info {
+    grid-row: auto;
+  }
+
+  .footer-menu {
+    padding-top: 0;
+  }
+
+  .footer-social {
+    grid-column: auto;
+  }
+
+  .footer-divider {
+    margin-top: 48px;
+  }
+}
+
+/* Progressive enhancement: only JavaScript adds .reveal after observer setup.
+   Opacity and a vertical transform preserve the existing layout and widths. */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 450ms ease-out, transform 450ms ease-out;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+/* A keyboard user must never land on an invisible control. */
+.reveal:focus-within {
+  opacity: 1;
+  transform: translateY(0);
+  transition: none;
+}
+
+:where(a, button) {
+  transition: color 180ms ease-out, background-color 180ms ease-out,
+    border-color 180ms ease-out, box-shadow 180ms ease-out,
+    filter 180ms ease-out, text-decoration-color 180ms ease-out;
+}
+
+.main-nav a,
+.footer-menu a {
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 4px;
+}
+
+button:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 5px;
+}
+
+/* Keep hover feedback off touchscreens; retain the existing footer color. */
+@media (hover: hover) and (pointer: fine) {
+  .main-nav a:hover,
+  .footer-menu a:hover {
+    text-decoration-color: currentColor;
+  }
+
+  .footer-menu a:hover {
+    color: #ff6b20;
+  }
+
+  :where(.button, .works-button, .newsletter-send):hover {
+    filter: brightness(0.94);
+  }
+}
+
+:where(a, button):active {
+  filter: brightness(0.88);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  :where(a, button) {
+    transition: none;
+  }
+}
+
+@media print {
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Card feedback is temporary: hover for a mouse, visible focus for a keyboard.
+   Transparent backgrounds preserve the original section colors. */
+.business-card,
+.guide-card {
+  background-color: transparent;
+  transition: background-color 200ms ease;
+}
+
+.business-card.reveal.is-visible,
+.guide-card.reveal.is-visible {
+  transition: opacity 450ms ease-out, transform 450ms ease-out,
+    background-color 200ms ease;
+  transition-delay: var(--reveal-delay, 0ms), var(--reveal-delay, 0ms), 0ms;
+}
+
+.business-card.reveal:focus-within,
+.guide-card.reveal:focus-within {
+  transition: background-color 200ms ease;
+  transition-delay: 0ms;
+}
+
+.business-card:focus-visible,
+.guide-card:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: -3px;
+}
+
+.business-card:focus-visible {
+  background-color: #f8f9fc;
+}
+
+.guide-card:focus-visible {
+  background-color: #3c478c;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .business-card:hover {
+    background-color: #f8f9fc;
+  }
+
+  .guide-card:hover {
+    background-color: #3c478c;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .business-card,
+  .guide-card,
+  .business-card.reveal.is-visible,
+  .guide-card.reveal.is-visible,
+  .business-card.reveal:focus-within,
+  .guide-card.reveal:focus-within {
+    transition: none;
+  }
+}

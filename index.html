@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Software Landing — SEO Agency</title>
+  <link rel="preload" href="assets/fonts/dm-sans-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <!-- Local jQuery: defer preserves execution order before script.js. -->
+  <script src="jquery-4.0.0.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Un fond commun pour Navbar et Hero. -->
+  <main>
+    <div class="first-screen" id="home">
+      <header class="site-header">
+        <div class="container navbar">
+          <a class="brand" href="#home" aria-label="Logoipsum home">
+            <img src="assets/images/logo.png" alt="Logoipsum" width="135" height="27">
+          </a>
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="#home" aria-current="page">Home</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#pricing">Pricing Plan</a>
+            <a href="#about">About Us</a>
+          </nav>
+          <a class="button contact-button" href="#contact">Contact Us</a>
+        </div>
+      </header>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="container">
+            <div class="hero-content">
+              <p class="eyebrow">SEO EXPERT AGENCY</p>
+              <h1 id="hero-title">Professional SEO Services for Your Website</h1>
+              <p class="hero-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                ut aliquam, purus sit amet luctus venenatis.
+              </p>
+              <a class="button" href="#services">Get Started</a>
+            </div>
+          </div>
+        </section>
+    </div>
+
+    <!-- Figma: X 155, Y 980, W 1130, H 100 on a 1440 px frame. -->
+    <section class="partners" aria-label="Our partners">
+      <div class="partner-logos" role="group" tabindex="0"
+           aria-label="Partner logos. Scroll horizontally on small screens." data-reveal>
+        <img src="assets/images/partner.png"
+             alt="Company Text Logo, Company, A Company, Text Logo, Company"
+             width="1130" height="100" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <!-- Business Power: Figma group X 104, Y 1200, W 1232, H 608. -->
+    <section class="business-power" id="services" aria-labelledby="business-title">
+      <div class="container">
+        <h2 id="business-title" data-reveal>Boost your Business<br>with the Power of SEO.</h2>
+        <ul class="business-grid" data-reveal-group aria-label="Business services">
+          <li class="business-card" data-reveal tabindex="0">
+            <img class="business-card-icon" src="assets/images/business-icon.png"
+                 alt="" width="64" height="64" loading="lazy" decoding="async">
+            <h3 id="business-card-title-1">SEO Magic Keyword</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum has been the industry's standard dummy text.</p>
+          </li>
+          <li class="business-card" data-reveal tabindex="0">
+            <img class="business-card-icon" src="assets/images/business-icon.png"
+                 alt="" width="64" height="64" loading="lazy" decoding="async">
+            <h3 id="business-card-title-2">Traffic Result</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum has been the industry's standard dummy text.</p>
+          </li>
+          <li class="business-card" data-reveal tabindex="0">
+            <img class="business-card-icon" src="assets/images/business-icon.png"
+                 alt="" width="64" height="64" loading="lazy" decoding="async">
+            <h3 id="business-card-title-3">Keyword Research</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum has been the industry's standard dummy text.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Featured: sizes and spacing estimated from the screenshot. -->
+    <section class="featured" id="featured" aria-labelledby="featured-title">
+      <div class="container featured-content">
+        <h2 id="featured-title" data-reveal>Make your site more visible to search engines.</h2>
+        <ol class="featured-list" role="list" data-reveal-group>
+          <li class="featured-item" data-reveal>
+            <span class="featured-number" aria-hidden="true">01</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </li>
+          <li class="featured-item" data-reveal>
+            <span class="featured-number" aria-hidden="true">02</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </li>
+          <li class="featured-item" data-reveal>
+            <span class="featured-number" aria-hidden="true">03</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </li>
+          <li class="featured-item" data-reveal>
+            <span class="featured-number" aria-hidden="true">04</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SEO Traffic: source image sizes are exact; layout values are estimates. -->
+    <section class="seo-traffic" id="seo-traffic" aria-labelledby="traffic-title">
+      <div class="container traffic-layout">
+        <figure class="traffic-visual" data-reveal>
+          <img class="traffic-placeholder" src="assets/images/traffic-placeholder.png"
+               alt="" width="608" height="688" loading="lazy" decoding="async">
+
+          <!-- Visual dashboard; its information is also in the figure caption. -->
+          <div class="traffic-card" aria-hidden="true">
+            <img class="traffic-card-background" src="assets/images/traffic-card.png"
+                 alt="" width="360" height="440" loading="lazy" decoding="async">
+            <img class="traffic-avatar" src="assets/images/traffic-avatar.png"
+                 alt="" width="80" height="80" loading="lazy" decoding="async">
+            <p class="traffic-profile-name">Ramadan Kareem</p>
+            <p class="traffic-profile-role">Executive Comitee</p>
+            <div class="traffic-experience">
+              <span class="traffic-experience-role">Executive Comitee</span>
+              <span class="traffic-experience-dot"></span>
+              <span class="traffic-experience-years">Exp: 2 years</span>
+            </div>
+
+            <div class="traffic-tooltip">
+              <strong>Growth : 88%</strong>
+              <span>June - October 2020</span>
+            </div>
+            <div class="traffic-chart">
+              <img class="traffic-chart-fill" src="assets/images/traffic-chart-fill.png"
+                   alt="" width="360" height="125" loading="lazy" decoding="async">
+              <span class="traffic-chart-beam"></span>
+              <img class="traffic-chart-outline" src="assets/images/traffic-chart-outline.png"
+                   alt="" width="361" height="87" loading="lazy" decoding="async">
+              <span class="traffic-chart-point"></span>
+            </div>
+          </div>
+          <figcaption class="visually-hidden">
+            Example dashboard for Ramadan Kareem, Executive Comitee, with 2 years
+            of experience. Growth: 88%, June to October 2020.
+          </figcaption>
+        </figure>
+
+        <div class="traffic-copy">
+          <h2 id="traffic-title" data-reveal>Grow your traffic with SEO.</h2>
+          <p class="traffic-description" data-reveal>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="traffic-milestone" data-reveal>
+            <p class="traffic-milestone-value">35%</p>
+            <div class="traffic-milestone-labels">
+              <p>Increase traffic</p>
+              <p>Mobile view</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SEO Guide: 1440 x 743 desktop section from the supplied reference. -->
+    <section class="seo-guide" id="seo-guide" aria-labelledby="guide-title">
+      <div class="container">
+        <h2 id="guide-title" data-reveal>The Ultimate SEO Guide.</h2>
+        <p class="guide-description" data-reveal>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+          Lorem Ipsum has been the industry's standard dummy text.
+        </p>
+        <ul class="guide-grid" data-reveal-group aria-label="SEO services">
+          <li class="guide-card" data-reveal tabindex="0">
+            <img class="guide-icon" src="assets/images/seo-guide-icon.png"
+                 alt="" width="120" height="120" loading="lazy" decoding="async">
+            <h3 id="guide-card-title-1">Competitive Analysis</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          </li>
+          <li class="guide-card" data-reveal tabindex="0">
+            <img class="guide-icon" src="assets/images/seo-guide-icon.png"
+                 alt="" width="120" height="120" loading="lazy" decoding="async">
+            <h3 id="guide-card-title-2">SEO Optimization</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          </li>
+          <li class="guide-card" data-reveal tabindex="0">
+            <img class="guide-icon" src="assets/images/seo-guide-icon.png"
+                 alt="" width="120" height="120" loading="lazy" decoding="async">
+            <h3 id="guide-card-title-3">PPC Management</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          </li>
+          <li class="guide-card" data-reveal tabindex="0">
+            <img class="guide-icon" src="assets/images/seo-guide-icon.png"
+                 alt="" width="120" height="120" loading="lazy" decoding="async">
+            <h3 id="guide-card-title-4">Search Result</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Our Works: supplied 816 x 400 featured card and 400 x 400 thumbnails. -->
+    <section class="our-works" id="portfolio" aria-labelledby="works-title">
+      <div class="container works-grid" data-reveal-group>
+        <div class="works-intro">
+          <h2 id="works-title" data-reveal>Our Works</h2>
+          <p data-reveal>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+          <a class="works-button" href="#services">Get Started</a>
+        </div>
+        <figure class="works-featured" data-reveal>
+          <figcaption>
+            <h3>Traffic site - Grew.Co</h3>
+            <p class="works-see-more">See More <span aria-hidden="true">&#8594;</span></p>
+          </figcaption>
+        </figure>
+        <div class="works-thumbnail" data-reveal>
+          <img src="assets/images/works-placeholder.png" alt=""
+               width="400" height="400" loading="lazy" decoding="async">
+        </div>
+        <div class="works-thumbnail" data-reveal>
+          <img src="assets/images/works-placeholder.png" alt=""
+               width="400" height="400" loading="lazy" decoding="async">
+        </div>
+        <div class="works-thumbnail" data-reveal>
+          <img src="assets/images/works-placeholder.png" alt=""
+               width="400" height="400" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing: static Annual state from the supplied reference.
+         Monthly rates and purchase destinations have not been provided. -->
+    <section class="pricing" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <h2 id="pricing-title" data-reveal>Pricing Plans</h2>
+        <p class="pricing-description" data-reveal>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem<br>
+          Ipsum has been the
+        </p>
+        <div class="pricing-period" role="group" aria-label="Billing period: Annual" data-reveal>
+          <span class="pricing-period-monthly">Monthly</span>
+          <img src="assets/images/pricing-switch.png" alt="" width="80" height="56"
+               loading="lazy" decoding="async">
+          <span class="pricing-period-annual">Annual</span>
+        </div>
+        <div class="pricing-grid" data-reveal-group>
+          <article class="pricing-card" aria-labelledby="basic-title" data-reveal>
+            <img class="pricing-logo" src="assets/images/seo-guide-icon.png" alt=""
+                 width="80" height="80" loading="lazy" decoding="async">
+            <h3 id="basic-title">Basic</h3>
+            <p class="pricing-price">$29</p>
+            <p class="pricing-card-description">The best choice for your company when you want to build a website that will increase sales of the product or service to be sold</p>
+            <span class="pricing-purchase">Purchase</span>
+          </article>
+          <article class="pricing-card pricing-card--featured" aria-labelledby="standard-title" data-reveal>
+            <img class="pricing-logo" src="assets/images/pricing-logo.png" alt=""
+                 width="80" height="80" loading="lazy" decoding="async">
+            <h3 id="standard-title">Standard</h3>
+            <p class="pricing-price">$79</p>
+            <p class="pricing-card-description">The best choice for your company when you want to build a website that will increase sales of the product or service to be sold</p>
+            <span class="pricing-purchase">Purchase</span>
+          </article>
+          <article class="pricing-card" aria-labelledby="premium-title" data-reveal>
+            <img class="pricing-logo" src="assets/images/seo-guide-icon.png" alt=""
+                 width="80" height="80" loading="lazy" decoding="async">
+            <h3 id="premium-title">Premium</h3>
+            <p class="pricing-price">$199</p>
+            <p class="pricing-card-description">The best choice for your company when you want to build a website that will increase sales of the product or service to be sold</p>
+            <span class="pricing-purchase">Purchase</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials: Figma group X 208, W 1128, H 520 on a 1440 px frame. -->
+    <section class="testimonials" id="testimonials" aria-label="Testimonials">
+      <div class="container">
+        <div class="testimonial-panel">
+          <img class="testimonial-portrait" src="assets/images/testimonial-placeholder.png"
+               alt="" width="400" height="480" loading="lazy" decoding="async" data-reveal>
+          <figure class="testimonial-content" data-reveal>
+            <img class="testimonial-quote-icon" src="assets/images/testimonial-quote.png"
+                 alt="" width="80" height="80" loading="lazy" decoding="async">
+            <blockquote class="testimonial-quote">
+              <p>Now I an Manage my Remote<br>Team in Easy Way</p>
+            </blockquote>
+            <figcaption class="testimonial-footer">
+              <div class="testimonial-attribution">
+                <cite class="testimonial-author">Alber Riera</cite>
+                <p class="testimonial-role">CEO of Patah Hati Agency</p>
+              </div>
+              <!-- Navigation artwork from the reference; only one testimonial supplied. -->
+              <img class="testimonial-arrows" src="assets/images/testimonial-arrows.png"
+                   alt="" width="97" height="42" loading="lazy" decoding="async">
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest News: three identical preview cards shown in the reference.
+         Article destinations have not been supplied; Explore More is static text. -->
+    <section class="latest-news" id="latest-news" aria-labelledby="news-title">
+      <div class="container">
+        <h2 id="news-title" data-reveal>Our Latest News</h2>
+        <div class="news-grid" data-reveal-group>
+          <article class="news-card" aria-labelledby="news-one-title" data-reveal>
+            <div class="news-visual">
+              <img src="assets/images/works-placeholder.png" alt=""
+                   width="400" height="400" loading="lazy" decoding="async">
+            </div>
+            <h3 id="news-one-title">Reverse-Engineering<br>Google&#8217;s Algorithm</h3>
+            <p class="news-meta">
+              <span>14 Feb</span><span class="news-meta-dot" aria-hidden="true"></span><span>Animals</span>
+            </p>
+            <p class="news-excerpt">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+            <span class="news-explore">Explore More</span>
+          </article>
+          <article class="news-card" aria-labelledby="news-two-title" data-reveal>
+            <div class="news-visual">
+              <img src="assets/images/works-placeholder.png" alt=""
+                   width="400" height="400" loading="lazy" decoding="async">
+            </div>
+            <h3 id="news-two-title">Reverse-Engineering<br>Google&#8217;s Algorithm</h3>
+            <p class="news-meta">
+              <span>14 Feb</span><span class="news-meta-dot" aria-hidden="true"></span><span>Animals</span>
+            </p>
+            <p class="news-excerpt">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+            <span class="news-explore">Explore More</span>
+          </article>
+          <article class="news-card" aria-labelledby="news-three-title" data-reveal>
+            <div class="news-visual">
+              <img src="assets/images/works-placeholder.png" alt=""
+                   width="400" height="400" loading="lazy" decoding="async">
+            </div>
+            <h3 id="news-three-title">Reverse-Engineering<br>Google&#8217;s Algorithm</h3>
+            <p class="news-meta">
+              <span>14 Feb</span><span class="news-meta-dot" aria-hidden="true"></span><span>Animals</span>
+            </p>
+            <p class="news-excerpt">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+            <span class="news-explore">Explore More</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA: supplied 1232 x 432 background and 56 x 56 send button.
+         The email field is native HTML, styled from Email Address.png. -->
+    <section class="newsletter" id="newsletter" aria-labelledby="newsletter-title">
+      <div class="container newsletter-panel">
+        <h2 id="newsletter-title" data-reveal>Sign Up for Our<br>Newsletters</h2>
+        <p class="newsletter-description" data-reveal>Get the latest articles to your inbox</p>
+        <form class="newsletter-form" id="newsletter-form" method="post"
+              aria-label="Newsletter signup" aria-describedby="newsletter-status" data-reveal>
+          <label class="visually-hidden" for="newsletter-email">Email address</label>
+          <input id="newsletter-email" name="email" type="email" autocomplete="email"
+                 placeholder="Input your email address in here" required>
+          <button class="newsletter-send" type="submit" aria-label="Subscribe to the newsletter">
+            <img src="assets/images/newsletter-send.png" alt=""
+                 width="56" height="56" loading="lazy" decoding="async">
+          </button>
+        </form>
+        <p class="newsletter-status" id="newsletter-status" role="status" hidden></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer: supplied 1440 x 423 background, 135 x 56 logo and social artwork. -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-info" id="about">
+          <a class="footer-brand" href="#home" aria-label="Logoipsum home">
+            <img src="assets/images/footer-logo.png" alt="Logoipsum"
+                 width="135" height="56" loading="lazy" decoding="async">
+          </a>
+          <p class="footer-description">
+            OurStudio is a digital agency<br>
+            UI / UX Design and Website<br>
+            Development located in Ohio,<br>
+            United States of America
+          </p>
+        </div>
+        <nav class="footer-menu" aria-label="Footer navigation">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#pricing">Pricing Plan</a>
+          <a href="#about">About Us</a>
+        </nav>
+        <!-- Social labels: profile URLs have not been supplied. -->
+        <div class="footer-social" role="group" aria-label="Social networks">
+          <span class="footer-social-icon" role="img" aria-label="Dribbble">Dr</span>
+          <span class="footer-social-icon" role="img" aria-label="Behance">Be</span>
+          <span class="footer-social-icon" role="img" aria-label="Instagram">Ig</span>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <p class="footer-copyright">Copyright Tanah Air Studio</p>
+    </div>
+  </footer>
+</body>
+</html>
